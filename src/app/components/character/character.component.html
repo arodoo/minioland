@@ -1,0 +1,40 @@
+​<div class="container mt-4 animated fadeIn fast">
+
+    <h1>{{ character.name }} <small> | Nacido en {{ character.birth }} </small> </h1>
+
+    <hr>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <img src="../../../assets/images/characters/{{character.img}}" [alt]="character.name" class="img-fluid">
+
+        </div>
+
+        <div class="col-md-8">
+
+            <h3>{{ character.name }}</h3>
+
+            <hr>
+
+            <p>{{ character.bio }}</p>
+
+            <h5> Lado: {{ character.side }} </h5>
+
+            <div>
+
+                <img *ngIf="character.side === 'de los buenos'" src="../../../assets/images/characters/buenos.PNG"
+                    alt="" class="img-fluid side">
+
+                <img *ngIf="character.side === 'malvado'" src="../../../assets/images/characters/malos.PNG"
+                    alt="character.name" class="img-fluid side">
+
+            </div>
+            <a [routerLink]="['/characters']" class="btn btn-outline-danger btn-block mt-3">Volver</a>
+
+        </div>
+
+    </div>
+
+</div>
