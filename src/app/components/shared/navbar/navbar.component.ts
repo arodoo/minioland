@@ -6,18 +6,19 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit{
+export class NavbarComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router){
-
-  }
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   searchCharacter(term: string) {
-/*     console.log(term); */
+    console.log(term);
     this.router.navigate(['/search', term]);
   }
-  
+
+  onFormSubmit(event: any) {
+    event.preventDefault();
+    const term = event.target.searchTerm.value;
+    this.searchCharacter(term);
+  }
 }

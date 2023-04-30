@@ -17,7 +17,6 @@ export class CharactersComponent implements OnInit {
 
   ngOnInit(): void {
     this.characters = this.characterService.getCharacters();
- 
   }
 
   seeCharacter(idx: number) {

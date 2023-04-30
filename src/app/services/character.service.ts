@@ -77,8 +77,19 @@ export class CharacterService {
   }
 
   searchCharacter = (term: string): Character[] => {
-    return this.characters.filter(character =>
-      character.name.toLowerCase().includes(term.toLowerCase()));
+    let characterArr: Character[] = [];
+    term = term.toLowerCase(); 
+
+      for(let i = 0; i < this.characters.length; i++){
+        let character = this.characters[i];
+        let name = character.name.toLowerCase();
+
+        if(name.indexOf(term) >= 0){
+          character.idx = i;
+          characterArr.push(character);
+        }
+      }
+      return characterArr;
     }
 
     
@@ -89,4 +100,5 @@ export interface Character {
   img: string;
   birth: string;
   side: string;
+  idx?: number;
 }

@@ -1,0 +1,12 @@
+<div >
+    <img src="../../../assets/images/characters/{{character.img}}" class="card-img-top"
+        alt="character.name">
+    <div class="card-body">
+        <h5 class="card-title text-center">{{character.name}}</h5>
+        <p class="card-text ">{{ character.bio }}</p>
+        <p class="card-text text-center"><small class="text-muted">{{character.birth}}</small></p>
+        <button type="button" class="btn btn-outline-danger btn-block" (click)="seeCharacter()">
+            Ver más info
+        </button>
+    </div>
+</div>

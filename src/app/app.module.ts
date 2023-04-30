@@ -14,6 +14,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { CharacterService } from './services/character.service';
 import { CharacterComponent } from './components/character/character.component';
 import { BrowserComponent } from './components/browser/browser.component';
+import { CharacterCardComponent } from './components/character-card/character-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BrowserComponent } from './components/browser/browser.component';
     AboutComponent,
     CharactersComponent,
     CharacterComponent,
-    BrowserComponent
+    BrowserComponent,
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,

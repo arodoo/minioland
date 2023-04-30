@@ -10,7 +10,7 @@ import { CharacterService } from 'src/app/services/character.service';
 export class BrowserComponent implements OnInit {
 
   characters: any[] = [];
-  term: any = "";
+  term: any = null;
   
   constructor(private activatedRoute: ActivatedRoute,
     private characterService: CharacterService,
